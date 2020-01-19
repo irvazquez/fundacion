@@ -1,0 +1,24 @@
+Módulos
+=======
+
+.. toctree::
+   :maxdepth: 2
+   
+   autenticacion
+
+.. _introduccion-modulos:
+
+Introducción
+------------
+
+Una de las mejores formas de poder crear una aplicación web que pueda ser escalable y de facil mantenimiento es usando módulos independientes que se comuniquen entre sí, de esta manera cada módulo solo tiene una obligación principal y no requiere guardar la información que no le compete. Esto hace que este tipo de aplicaciones sean mas seguras.
+
+Para este desarrollo optamos esta forma por las ventajas que presenta, aunque cabe decir que, como cualquier otra forma de desarrollo, también tiene sus desventajas.
+
+.. _ventajas:
+
+Ventajas
+--------
+
+* Esta es la 1
+* Este es otro

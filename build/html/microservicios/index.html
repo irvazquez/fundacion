@@ -1,0 +1,181 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Microservicios &#8212; documentación de Fundacion - </title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Servicio de Página estática" href="pagina-estatica.html" />
+    <link rel="prev" title="Bienvenido a la documentación de la Fundación!" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="microservicios">
+<h1>Microservicios<a class="headerlink" href="#microservicios" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pagina-estatica.html">Servicio de Página estática</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pagina-estatica.html#introduccion">Introducción</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autenticacion.html">Servicio de Autenticación</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autenticacion.html#introduccion">Introducción</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pagos.html">Servicio de Pagos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pagos.html#introduccion">Introducción</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="e-commerce.html">Servicio de E-commerce</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="e-commerce.html#introduccion">Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e-commerce.html#administrativa">Administrativa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e-commerce.html#publica">Pública</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e-commerce.html#clientes">Clientes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reportes.html">Servicio de Reportes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reportes.html#introduccion">Introducción</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eventos.html">Servicio de Eventos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html#introduccion">Introducción</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduccion">
+<span id="introduccion-modulos"></span><h2>Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una de las mejores formas de poder crear una aplicación web que pueda ser escalable y de facil mantenimiento es usando módulos independientes que se comuniquen entre sí, de esta manera cada módulo solo tiene una obligación principal y no requiere guardar la información que no le compete. Esto hace que este tipo de aplicaciones sean mas seguras.</p>
+<p>Para este desarrollo optamos esta forma por las ventajas que presenta, aunque cabe decir que, como cualquier otra forma de desarrollo, también tiene sus desventajas.</p>
+</div>
+<div class="section" id="ventajas">
+<span id="ventajas-servicios"></span><h2>Ventajas<a class="headerlink" href="#ventajas" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li>Cada servicio puede ser desarrollado con la tecnología con la que el desarrollador se sienta comodo, ó sea la mejor para desarrollar la responsabilidad que tendrá.</li>
+<li>El backend y frontend serán independientes (Esto para cada servicio).</li>
+<li>El agregar una nueva función a un servicio será más sencillo y con menos probabilidades de que falle toda la aplicación al momento de hacer la integración.</li>
+<li>La comunicación entre servicios es estandatrizada. (A traves de <a class="reference external" href="https://www.json.org/json-es.html">JSON’s</a>)</li>
+<li>Cada servicio contará con su propia base de datos.</li>
+</ul>
+</div>
+<div class="section" id="desvantajas">
+<span id="desventajas-servicios"></span><h2>Desvantajas<a class="headerlink" href="#desvantajas" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li>El mantenimiento se puede volver problematico (del Frontend y del Backend), si el número de tecnologias usadas es alto, debido a que se requeriría contar con al menos un desarrollador para cada tecnología usada. (Un desarrollador podría dominar 2 ó más tecnologías)</li>
+</ul>
+</div>
+<div class="section" id="algo-a-tener-en-cuenta">
+<span id="algo-mas-servicios"></span><h2>Algo a tener en cuenta<a class="headerlink" href="#algo-a-tener-en-cuenta" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Todo el desarrollo contará con documentación del estilo de este documento, con anotaciones especificas para los desarrolladores. El tiempo de crear una documentación es muy similar al tiempo de el desarrollo de la aplicación web.
+Además de que se integraran test automatizados para que si en un futuro es requerido hacer sun refactor, este sea más sencillo de hacer.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Fundacion</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Microservicios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pagina-estatica.html">Servicio de Página estática</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autenticacion.html">Servicio de Autenticación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagos.html">Servicio de Pagos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e-commerce.html">Servicio de E-commerce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportes.html">Servicio de Reportes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventos.html">Servicio de Eventos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduccion">Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ventajas">Ventajas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#desvantajas">Desvantajas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#algo-a-tener-en-cuenta">Algo a tener en cuenta</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="capítulo anterior">Bienvenido a la documentación de la Fundación!</a></li>
+      <li>Next: <a href="pagina-estatica.html" title="próximo capítulo">Servicio de Página estática</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Isaac.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/microservicios/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
